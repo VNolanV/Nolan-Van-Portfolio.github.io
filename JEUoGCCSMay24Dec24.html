@@ -11,20 +11,15 @@
         <h1>Nolan Van | Univeristy of Guelph CCS (May 2024 - December 2024) (Full Time Co-op)</h1>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <div class="dropdown">
-            <a href="#">Job Expereince</a>
-            <div class="dropdown-content">
-                <a href="JEUoGCCSJ26A26.html">Univeristy of Guelph CCS (January 2026 - April 2026) (Full Time Co-op)</a>
-                <a href="JEUoGCCSJ25A25.html">Univeristy of Guelph CCS (January 2025 - April 2025) (Part Time)</a>
-                <a href="JEUoGCCSM24D24.html">Univeristy of Guelph CCS (May 2024 - December 2025) (Full Time Co-op)</a>
-            </div>
-        </div>
+    <div id="navbar"></div>
 
-        <a href="four.html">GitHub Projects</a>
-    </nav>
+    <script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
 
     <main>
         <section class="about-container">
